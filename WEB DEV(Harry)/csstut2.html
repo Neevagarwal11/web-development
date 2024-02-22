@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
+<style>
+
+
+   /* Before and after Pseudo Selector  */
+
+   body{
+        background-color: white;
+        color: rgb(13, 112, 148);
+        width: 100vw;
+        font-family: 'Belanosima', sans-serif;
+    }
+    header::before{         /*Using the before sleector to add the bg image to set the opacity of the bg image*/
+        content: "";
+        background-image: url("https://images.unsplash.com/photo-1685438531044-ef75606db89d?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY4ODMxMjkxMg&ixlib=rb-4.0.3&q=80&w=1920")  ;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0.9;
+        width: 100vw;
+        height: 100vh;   
+        z-index: -1;
+   }
+ section{
+    display: flex;
+    flex-direction: column;
+    margin:33px;
+    height: 333px;
+    text-align: center;
+    justify-content:center;
+ }
+ section::before{
+    content: " This is content written using section::before selector";
+    font-weight: bold;
+ }
+ .navigation{
+    display: flex;
+ }
+li{
+    list-style: none;
+    padding: 34px 33px;
+}
+section p{
+    opacity: 1;
+    text-shadow: 2px 3px 4px rgb(13, 112, 148);
+}
+
+/* Box Shadow */
+
+.cardcontainer{
+    background-color: bisque;
+    display: flex;
+    width: 98vw;
+}
+        /* Multiple box shadow can be given. */
+.card{
+    padding: 23px 16px;
+        /* border: 2px solid red; */
+    margin: 23px 12px;
+    background-color: burlywood;
+    box-shadow: 4px 4px 15px 2px green;         /*box shadow - x axis , y-axis , blur radius , spread-radius , color */
+}       
+.card h2{
+    text-shadow: 1px 2px 3px darkblue;
+} 
+
+/* CSS Variable */
+
+:root{
+    --box-color:blue;                               /*These are a kind of global variable which can be used throughout the code.*/
+    --border-color:red;
+}
+
+.varcontainer{
+    display: flex;
+    background-color: rgb(247, 247, 199);
+}
+.box{
+     --box-color:blue;                                  /*These are a kind of local variables only accesible in this class*/
+     width: 333px;
+     height: 222px;
+     background-color: var(--box-color);
+     margin: 50px;
+     border: 4px solid var(--border-color);
+     box-shadow: 2px 3px 5px 2px var(--box-color);
+}
+
+        /* Keyframes and Animations */
+
+.anicontainer{
+    display: flex;
+    background-color: rgb(166, 214, 166);
+    margin-top: 20px;
+    height: 250px;
+}
+.anibox{                                            /*To assign an animation :-*/
+    background-color: green;                           /*1. An animation-name should be given.*/
+    width: 250px;                                        /*2. Animation-duration shall be given in seconds "s" eg. 2s*/
+    height: 250px;                                       /*3. Animation-iteration-count shall be given which specifies the number of times the animation should be run. */
+    color: blue;                                       /*4. Animation-fill-mode should be specified which states if the animation shall be stoped or shall be repeated */
+    position: relative;                                               /* a. "forwards mode will stop the animation at the place of completion."*/
+    animation-name: neev2;                                            /* b.  "alternate" mode will bring the animation to the initial place from where it started.*/
+    animation-duration: 8s;                              /*5. "Animation-timing-function" will set the animation to either ease-in or ease-out*/
+    animation-iteration-count: 3 ;                       /*6. "Animation-direction" will specify the direction of the animation */
+    animation-fill-mode: forwards;
+    /* animation-timing-function: ease-in; */
+}
+@keyframes neev1 {                                       /*These are keyframes used to give the animation what to do.*/
+    from {                                               /*Keyframes are accessed by "@keyframes animation-name" then "from" is the starting point of the amimation and "to" is the ending point of the animation.*/
+        width: 250px;
+    }
+    to {
+        width: 500px;
+    }
+}
+
+@keyframes neev2 {                                      /*These keyframes are made using the percentage of the animations.*/
+    0%{
+        left: 0px;
+        top: 0px;
+    }
+    25%{
+        left: 80vw;
+        top: 0px;
+    }
+    50%{
+        top: 250px;
+        left: 80vw;
+    }
+    75%{
+        left: 0px;
+        top: 250px;
+    }
+    100%{
+        left: 0px;
+        top: 0px;
+    }
+}
+
+
+
+    /* Transitions */
+
+.tranbox{
+    display: flex;
+    justify-content: center;                                /*Transition is just like animation with the properties*/
+    align-items: center;                                    /* 1.duration  2.timing-function  3.delay */
+    height: 200px;
+    width: 200px;
+    background-color: rgb(172, 24, 24);
+    transition: background-color;
+    /* transition-duration: 3s;
+    transition-timing-function: ease-out;
+    transition-delay: 1s; */
+    transition: all 2s ease-out ;                   
+}
+
+.tranbox:hover{                                 
+    background-color: rgb(29, 222, 167);
+    height: 300px;
+    width: 300px;
+    border-radius: 44px;
+    font-size: 2em;
+
+}
+
+
+        /*CSS Transform  Property */
+.tranfbox{                                              /*To transform an element*/
+    background-color: red;                            /*1. First a consition should be set on which the transformation should start eg.hover*/
+    border: 2px solid brown;                          /*2. Then using the transform property tag we can set the property to 4 different values these are:-*/
+    height: 300px;                                                  /*a. "Rotate" function used to rotate the element by a certain deg. eg transfrom = rotate(deg)*/
+    width: 300px;                                                   /*b. "skew" function used to tilt the element by a certain deg eg. transform = skew(deg)*/
+    margin: 30px;                                                   /*c. "scale" function is used to increase the size of the elment and the child element by the number of times specified. eg. transform= skew(1.5); */
+}                                                                   /*d. "translate" function is used to shift the element by the specified px*/
+.tranfcontainer{                                        /*3. Then to make the transform smooth we can use the transition property.*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: burlywood;
+    height: 80vh;
+
+}
+#rotatebox:hover{
+    transform: rotate(30deg);
+    transition: 1s ease-out;
+
+}
+#skewbox:hover{
+    transform: skew(21deg);
+    transition: 2s ease-out;
+}
+#scalebox:hover{
+    transform: scale(1.5);
+    transition: 2s ease-out 1.5s;
+}
+#translatebox:hover{
+    transform: translate(123px,123px);
+    transition: 2s ease-out;
+}
+
+
+
+    /* CSS Grid */
+                            /*Since the container tag has been made a grid the child items inside the container has become grid items.*/
+.gridcontainer{
+    display: grid;
+    /* grid-template-columns: 300px 100px 100px; */             /*grid-template-columns specifies the layout of the columns and the space it occupies and the number of columns we need to create.*/
+    /* grid-template-columns: auto 100px auto 200px; */
+    grid-template-columns: 1fr 4fr 1fr;                         /*fr indicates that the screen is been split into the ratios 1:4:1 over here and 1 part is given to the first and third column and 4 parts to the second column.*/
+    grid-gap: 2rem;                                             /*grid-gap is used to keep gap between grid.*/
+}
+.griditem{
+    height: 100px;
+    /* width: 100px; */
+    background-color: red;
+    margin: 3px;
+    border: 2px solid black;
+}
+
+.grid{
+    display: grid;
+    grid-template-rows: 1fr 1fr 4fr;            /*This specifies the rows with for the 1st 3 rows*/
+    grid-auto-rows: 3fr;                        /*For the rows which is not specified the grid-auto-rows is used.*/
+    grid-template-columns: 2fr 4fr;
+    grid-gap: 1rem;
+}
+.gridbox{
+    background-color: red;
+    border: 2px solid black;
+
+}
+
+
+.spancontainer{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(5 , 1fr);
+    grid-column-gap: 5rem;
+    grid-row-gap: 1rem;
+    
+}
+.spanbox{
+    border: 2px solid black;
+    background-color: violet;
+    padding: 26px;
+
+}
+.spanbox:first-child{
+    /* grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4; */
+
+    grid-column: 1  /  span 3;
+    grid-row: 1 / span 3;
+}
+
+.minmaxcontainer{
+    display: grid;
+    grid-gap: 1rem;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit , minmax(400px , 1fr));          /*This is used to create the grid box responsive.*/
+    justify-content: center;
+    align-items: center;
+
+}
+.minbox{
+    border: 2px solid black ;
+    background-color: blanchedalmond;
+    padding: 23px;
+}
+</style>
+ <body> 
+
+
+
+    <!-- Before and after Pseudo Selector -->
+
+
+
+        <header>
+            <nav class="navbar">
+                <ul class="navigation">
+                    <li class="item">Home</li>
+                    <li class="item">About</li>
+                    <li class="item">Services</li>
+                    <li class="item">Contact Us</li>
+                </ul>
+            </nav>
+        </header> 
+            <section>
+                <h1>welcome to Coding World</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt similique odit commodi necessitatibus illo qui minima corrupti nisi quam quasi ab harum eos quaerat, totam excepturi rem? Est, beatae explicabo! Sequi, consequuntur suscipit?</p>
+            </section>
+
+    <!--Box and text Shadow  -->
+<div class="cardcontainer">
+
+    <div class="card" id="card1"><h2>Card 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime voluptas vel quas ratione vitae distinctio rerum optio vero asperiores tempora consequatur recusandae possimus soluta reiciendis assumenda quo cupiditate nulla eos illo, architecto perferendis! Veritatis.</p>
+    </div>
+    <div class="card" id="card2"><h2>Card 2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime voluptas vel quas ratione vitae distinctio rerum optio vero asperiores tempora consequatur recusandae possimus soluta reiciendis assumenda quo cupiditate nulla eos illo, architecto perferendis! Veritatis.</p>
+    </div>
+    <div class="card" id="card3"><h2>Card 3 </h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime voluptas vel quas ratione vitae distinctio rerum optio vero asperiores tempora consequatur recusandae possimus soluta reiciendis assumenda quo cupiditate nulla eos illo, architecto perferendis! Veritatis.</p>
+    </div>
+</div>
+
+    <!-- CSS Variable -->
+<!-- <div class="varcontainer">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div> -->
+
+
+    <!-- Keyframes and Animations -->
+<div class="anicontainer">
+        <div class="anibox">
+
+            This is a box
+        </div>
+</div>
+<hr>
+    <!-- CSS Transitions -->
+    <h2>This is CSS Transition</h2>
+    <div class="trancontainer">
+        <div class="tranbox">
+            This is a box.
+        </div>
+    </div>
+
+<hr>
+
+<!-- CSS Transform -->
+
+    <div class="tranfcontainer">
+        <div class="tranfbox" id="rotatebox">
+            This is rotate box
+        </div>
+        <div class="tranfbox" id="skewbox">
+            This is a skew box
+        </div>
+        <div class="tranfbox" id="scalebox">
+            This is a scalebox
+        </div>
+        <div class="tranfbox" id="translatebox">
+            This is a translate box
+        </div>
+    </div>
+
+
+</div>
+
+    <!-- CSS Grids -->
+
+    <h2>CSS Grid for desining layout</h2>
+
+    <div class="gridcontainer">
+        <div class="griditem">This is Item-1</div>
+        <div class="griditem">This is Item-2</div>
+        <div class="griditem">This is Item-3</div>
+        <div class="griditem">This is Item-4</div>
+        <div class="griditem">This is Item-5</div>
+        <div class="griditem">This is Item-6</div>
+        <div class="griditem">This is Item-7</div>
+        <div class="griditem">This is Item-8</div>
+        <div class="griditem">This is Item-9</div>
+    </div>
+<hr><hr>
+<div class="grid">
+    <div class="gridbox">This is box-1</div>
+    <div class="gridbox">This is box-2</div>
+    <div class="gridbox">This is box-3</div>
+    <div class="gridbox">This is box-4</div>
+    <div class="gridbox">This is box-5</div>
+    <div class="gridbox">This is box-6</div>
+    <div class="gridbox">This is box-7</div>
+    <div class="gridbox">This is box-8</div>
+    <div class="gridbox">This is box-9</div>
+    <div class="gridbox">This is box-10</div>
+</div>
+
+<hr><hr>
+    <div class="spancontainer">
+       <div class="spanbox">Item-1</div>
+       <div class="spanbox">Item-2</div>
+       <div class="spanbox">Item-3</div>
+       <div class="spanbox">Item-4</div>
+       <div class="spanbox">Item-5</div>
+       <div class="spanbox">Item-6</div>
+       <div class="spanbox">Item-7</div>
+       <div class="spanbox">Item-8</div>
+       <div class="spanbox">Item-9</div>
+       <div class="spanbox">Item-9</div>
+       <div class="spanbox">Item-9</div>
+       <div class="spanbox">Item-9</div>
+       <div class="spanbox">Item-9</div>
+       <div class="spanbox">Item-9</div>
+       <div class="spanbox">Item-9</div>
+       <div class="spanbox">Item-9</div>
+       <div class="spanbox">Item-9</div>
+    </div>
+
+<hr><hr>
+    <div class="minmaxcontainer">
+        <div class="minbox">Item-1</div>
+        <div class="minbox">Item-2</div>
+        <div class="minbox">Item-3</div>
+        <div class="minbox">Item-4</div>
+        <div class="minbox">Item-5</div>
+        <div class="minbox">Item-6</div>
+        <div class="minbox">Item-7</div>
+        <div class="minbox">Item-8</div>
+        <div class="minbox">Item-9</div>
+        <div class="minbox">Item-10</div>
+        <div class="minbox">Item-11</div>
+        <div class="minbox">Item-12</div>
+    </div>
+</body>
+</html>

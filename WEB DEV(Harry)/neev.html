@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- This is how description , search keywords and roborts are set in html -->
+    <meta name = 'desscription' content="This is description">
+    <meta name = 'keyword' content = "html,web development , web dev begginers">
+    <meta name = "roborts"  content=" INDEX FOLLOW">
+    <title>Neev's Website</title>
+
+    <!-- This is how external css is linked into html -->
+    <link rel="stylesheet" href="neev.css">
+
+    <!-- This is how external Javascript is linked into html -->
+    <script src="neev.js"></script>
+</head>
+<body>
+    This is a test website  
+    <h1>Neev</h1>
+    <h2>Neev</h2>
+    <p>This is a normal paragraph</p>
+    <p><Strong>This is a bolded paragraph made using strong abbreviate</Strong></p>
+    <p><br></p>                                                             <!--This is a 'br'  line break command -->
+    <p><hr></p>                                                             <!--This is a 'hr' horizontal ruler command which makes a line.-->
+    <p><Em>This is an emphisized paragraph made using em abbreviate</Em></p>
+    <!-- CTL + ENT to jump into new line -->
+
+    <!-- To make an link connected to text use the below -->
+    <a href="https://Youtube.com">Go to Youtube!!!</a> <br>                  <!--Use the a abbreviate to add a link to a text-->
+    <a href="https://Google.com"  target = '_blank'>Go to Google!!!</a>      <!--To open  the link i n new tab use the 'TARGET' attribute-->
+
+
+    <!-- Adding an Image -->
+    <!-- <img src="Campfire.jpg" alt="Image Loading">   -->
+    <!-- TO add image use'img Abbreviate' where src is the source of     the image either online or offline and alt is the alternate text shown if the image is not loaded in the website-->
+     
+
+
+    <h1>LISTS</h1>
+
+    <p><br></p>
+    <h3>Unordered List</h3>
+
+    <!-- To make a unordered list use the attribute 'UL' to specify the shape use the 'TYPE'attribute -->
+    <ul type="square">
+        <LI>This is the 1st elememt of the unordered list </LI>
+        <LI>This is the 2nt elememt of the unordered list </LI>
+        <LI>This is the 3rd elememt of the unordered list </LI>
+        <LI>This is the 4th elememt of the unordered list </LI>
+
+    </ul>
+
+    <h3>Ordered List </h3>
+    <!-- To make an ordered list us the 'Ol' attribute-->
+    <ol type = a>
+        <li>This is the 1st element of the ordered list </li>
+        <li>This is the 2nd element of the ordered list </li> 
+        <li>This is the 3rd element of the ordered list </li>
+        <li>This is the 4th element of the ordered list </li>
+        <ol type="i">                                                   <!--The concept of nested list-->
+            <li>This is a nested list</li>
+            <li>This is a nested list</li>
+            <li>This is a nested list</li>
+                        
+        </ol>
+    </ol>
+
+<p><br></p>
+
+
+
+    <h1>Tables</h1>
+    <Table>                                                           <!--This attr make a html table-->
+        <thead>                                                       <!--This is the table head attr-->
+            <tr>                                                      <!--This attr makes a table row-->
+                <th> sno.</th>
+                <th>Name</th>
+                <th>EmpNo.</th>
+                <th>Salary</th>
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Neev</td>
+                <td>69</td>
+                <td>10000000000000</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>sfava</td>
+                <td>31</td>
+                <td>233 </td>
+            </tr>
+        </tbody>
+    </Table>
+
+    <table>
+        <thead>
+            <tr>
+                <th>sno.</th>
+                <th>Name</th>
+                <th>contact</th>
+                <th>salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1.</td>
+                <td>Neev</td>
+                <td>849302994</td>
+                <td>1000cr</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- HTML FORMS BEGINS HERE  -->
+<h1>Forms</h1>  
+
+<form action="backend.php" method="post">     <!--action is used to update the value in any backend-->
+
+    <label for="checkbox">TO keep the box checked...</label>
+<div>                                                  <!--'div' funtion is used to occupy the whole line for the command given below --> 
+    Name: <input type="text" name="myname">
+</div>
+<br>                                                   <!--br is not recommemded as it'll be achived by css-->
+<div>
+    Role: <input type="text" name="myrole">
+</div>
+<br>
+<div>
+    Email: <input type="email" name="myemail" id="">        <!--'name' can be used to keep the value as an identifier in the backend-->
+</div>
+<br>
+<div>
+    DOB: <input type="date" name="" id="">
+</div>
+<br>
+<div>
+    <label for="bns">
+    BONUS: <input type="number" name="MYBONUS" id="bns">
+</label>
+</div>
+<br>
+
+<div>
+    <label for="checkbox">               <!--Label commd is used to make the words actionable for this to work for and id should be same-->
+    TO keep the box checked... <input type="checkbox" name="" id="checkbox" >
+    </label>
+</div>
+<br>
+<div>
+    My Gender:   <br><label for="gender"> Male <input type="radio" name="mygender" id="gender"> </label>
+    <label for="fegender"> Female <input type="radio" name="mygender" id="fegender">   </label>     <!--As the name abbreviate is the same you can select only 1 option-->
+</div>
+<br>
+<div>
+    Write about Yourself (Textarea) <textarea name="" id="" cols="30" rows="10"></textarea>
+</div><br>
+<div>
+    <label for="car">Choose Car to use: </label>
+    <select name="car" id="car">
+        <option value="swft">SWIFT</option>
+        <option value="Brz">Brezza</option>
+    </select>
+</div>
+<br>
+<div>
+    <input type="submit" value="Press to Submit">
+</div>
+<br>
+<div>
+    <input type="reset" value="Reset">
+</div>
+</form>
+
+<!-- Inline and Block Elements -->
+
+<h1>Inline and Block Elements</h1>
+
+<p >'p' is a block Element..</p>
+
+<span style="border: 2px solid cyan" > Span is a inline element....</span>
+<span>This proves it</span>
+
+<div>div is a block element</div>
+
+<ul>
+    <li>1st element</li> <li>TO check if it's inline</li>
+    <li>This proves li is a block element</li>
+</ul>
+
+<em>em is a inline element...</em> <em>This proves it</em> <br>
+<strong>strong is an inline element...</strong> <strong>Seriously</strong>
+
+<br><br><br><br>
+
+<h1>Ids and classes</h1>
+<!-- Ids and Classes -->
+
+<div id="mainBox" Class ="Redbg blackBorder" ></div>
+
+<!-- Emmet (SHort cuts) -->
+For classes . can be used for eg. span.Redbg for the whole code to be written <br>
+For id # can be used for eg. span#mainBox for the whole code to be writtren
+<!-- Emmet takes div tag as default -->
+
+
+<h1>HTML Entites</h1>
+Html Entites are used to show special characters which are not showed in the keyboard or are reserved by HTML such as <strong> &lt; &gt; &pound; </strong>etc. by using the charqacter <strong>&amp;</strong>
+
+<p>&#8203;</p>
+<p>Empty spaces are made by using &amp;&num;8203 &#8203; </p> 
+
+
+<!-- Sementic Tags -->
+<em><h1>HTML Sementic Tags</h1></em>
+
+<details>
+   <summary>     This is Neev Learning Html </summary> web development.
+</details>
+
+<figure>
+    <img src="Campfire.jpg" alt="Processing..." width="200" height="100">
+    <figcaption style="background-color: cyan;">Campfire at a cold night in Munnar.</figcaption>
+</figure>
+
+<article class="Forecast">                  
+    <h3>Weather Forecast for 12th May</h3>
+    <article class="Day forecast">
+        <h5>10:15pm May 12th </h5>
+        <p>Partly Cloudy</p>
+    </article>
+    <article class="Day forecast">
+        <h5>1:00pm May 12th</h5>
+        <p>Bright Sunny</p>
+    </article>
+    <article class="Day forecast">
+        <h5>5:30pm May 12th</h5>
+        <p>Heavy Rains</p>
+    </article>
+</article>
+
+
+
+</body>
+</html>

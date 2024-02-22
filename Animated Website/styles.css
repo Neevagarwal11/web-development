@@ -1,0 +1,209 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    color: #fff;
+    font-family: 'Montserrat';
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* NAVBAR*/
+#nav{
+    height: 140px;
+    width: 100%;
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+    gap: 50px;
+    padding: 0 150px;
+    position: fixed;
+    z-index: 11;
+}
+#nav img{
+    height: 80px;
+}
+#nav h4{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+/* Cursor */
+/* #cursor{
+    height: 20px;
+    width: 20px;
+    background-color:#95C11E ;
+    position: fixed;
+    border-radius: 50%;
+    z-index: 100;
+} */
+#cursor-blur{
+    height: 400px;
+    width: 400px;
+    background-color:#b0ee0630 ;
+    filter: blur(30px);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 10;
+    
+}
+
+
+/* BG-VIDEO */
+video{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -100;
+}
+
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0,0.6);
+    z-index: 10;
+}
+#page-1{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+#page-1 h1{
+    font-size: 115px;
+    font-weight: 900;
+    position: relative;
+}
+#page-1 h1::before{
+    content: "EAT.DRINK.PLAY.";
+    position: absolute;
+    color: black;
+    top: -6px;
+    left: -6px;
+    -webkit-text-stroke: 1px #95C11E;
+    z-index: -9;
+    font-weight: 500;
+}
+#page-1 h2{
+    font-size: 26px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+#page-1 p{
+    font-size: 20px;
+    font-weight: 500;
+    width: 44%;
+}
+
+/* Page -2 */
+#page-2{
+    width: 100vw;
+    height: 120vh;
+    z-index: 9;
+}
+#scroller{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+#scroller h4{
+    display: inline-block;
+    font-weight: 900;
+    color: transparent;
+    font-size: 100px;
+    white-space: nowrap;
+    margin-right: 10px;
+    font-family: gilroy;
+    -webkit-text-stroke: 2px #95C11E;
+    transition:  0.4s ease-in;
+}
+#scroll-in{
+    animation: scroll 20s linear infinite;
+    display: inline-block;
+    white-space: nowrap;
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+#scroller h4:hover{
+    color:#95C11E ;
+}
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+/* ABOUT US PAGE 2 */
+
+#about-us{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 40vh;
+    justify-content: space-around;
+    padding: 0 60px;
+}
+#about-us img{
+    height: 220px;
+    width: 220px;
+    border-radius: 12%;
+    object-fit: cover;
+}
+#about-us-words{
+    width: 52%;
+    text-align: center;
+    /* font-size: 20px; */
+}
+#about-us-words h3{
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+#about-us-words p{
+    font-size: 20px;
+    line-height: 27px;
+}
+
+/* CARD CONTAINER */
+#cards-container{
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+    
+}
+.card{
+    width: 20%;
+    height: 42vh;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+}
+#card1{
+    background-image: url(ASSETS/card1.avif);
+
+}
+#card2{
+    background-image: url(ASSETS/card2.webp);
+}
+#card3{
+    background-image: url(ASSETS/card3.avif);
+}

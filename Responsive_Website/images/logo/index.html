@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" media="screen and (max-width : 1350px)" href="phone.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Belanosima&family=Bree+Serif&display=swap"
+      rel="stylesheet"
+    />
+    
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div id="navbar">
+      <div id="logo">
+        <img src="logo.jpg" alt="Logo" width="100px " height="100px" />
+      </div>
+      <ul >
+        <li class="navitem"><a href="#home">Home</a></li>
+        <li class="navitem"><a href="#servicescontainer">Services</a></li>
+        <li class="navitem"><a href="#client">Our Clients</a></li>
+        <li class="navitem"><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Home Section -->
+    <section id="home">
+      <h1 class="h-primary">Welcome to My Restaurant</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+        similique reprehenderit adipisci voluptates cum tempora nesciunt nobis
+        doloribus nam blanditiis! Non ex, iusto aliquam culpa voluptates, alias,
+        veritatis eius aut rerum soluta fugiat.
+      </p>
+      <button class="btn">Order</button>
+      
+    </section>
+    <!-- Services Section -->
+    <section id="servicescontainer">
+      <h1 class="h-primary">Our services</h1>
+      <div id="services">
+        <div class="box">
+          <img src="food.jpg" alt="" />
+          <h2 class="h-secondary">Food Ordering</h2>
+          <p class="center">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
+            eligendi deserunt, nihil mollitia architecto, cum iste fuga unde
+            facilis dignissimos temporibus sapiente, voluptates at natus
+            cupiditate. Explicabo quos tenetur praesentium vero expedita
+            tempore!
+          </p>
+        </div>
+        <div class="box">
+          <img src="bgimage1.jpg" alt="" />
+          <h2 class="h-secondary">Food Catering</h2>
+          <p class="center">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
+            eligendi deserunt, nihil mollitia architecto, cum iste fuga unde
+            facilis dignissimos temporibus sapiente, voluptates at natus
+            cupiditate. Explicabo quos tenetur praesentium vero expedita
+            tempore!
+          </p>
+        </div>
+        <div class="box">
+          <img
+            src="https://img.bentchair.com/inner-banner/bulk-order2.png"
+            alt=""
+          />
+          <h2 class="h-secondary">Bulk Ordering</h2>
+          <p class="center">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
+            eligendi deserunt, nihil mollitia architecto, cum iste fuga unde
+            facilis dignissimos temporibus sapiente, voluptates at natus
+            cupiditate. Explicabo quos tenetur praesentium vero expedita
+            tempore!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Section -->
+
+    <section id="client">
+      <h1 class="h-primary center">Our Clients</h1>
+      <div class="clients">
+        <div class="clientitem">
+          <img src="logo2" alt="" />
+        </div>
+        <div class="clientitem">
+          <img src="logo5" alt="" />
+        </div>
+        <div class="clientitem">
+          <img src="logo3.jpg" alt="" />
+        </div>
+        <div class="clientitem">
+          <img src="logo4" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+
+    <section id="contact" > 
+      <h1 class="h-primary center">Contact Us</h1>
+      <div class="contact-box">
+        <form name="contact-form"  method="post" id="form">
+          <div class="form-group">
+            <label for="name"></label>
+            Name:
+            <input type="text" name="name" placeholder="Enter Your Name " id="name"/>
+          </div>
+          <div class="form-group">
+            <label for="email"></label>
+            E-mail:
+            <input type="email" name="email" placeholder="Enter Your E-mail" id="email" />
+          </div>
+          <div class="form-group">
+            <label for="phno"></label>
+            Phone Number:
+            <input
+              type="phone"
+              name="phno"
+              placeholder="Enter Your Phone Number " id="phno"
+            />
+          </div>
+          <div class="form-group">
+            <label for="area"></label>
+            Message: <textarea name="area" id="" cols="30" rows="10"></textarea>
+          </div>
+              <input type="submit" onclick="formvalidation()">
+        </form>
+
+      </div>
+    </section>
+
+    <footer>
+      <div class="center">
+        Copyright &copy; www.myrestaurant.com. All rigths reserved
+      </div>
+    </footer>
+
+
+    <script>
+    function formvalidation(){
+    var form = document.getElementById('form');
+    var fname = document.getElementsById("name");
+    var email = document.getElementById("email");
+    var no = document.getElementById("phno");
+
+    if(fname==null || fname.length<8){
+        alert("Name can't be Empty");
+        fname.focus()
+        return false;
+    }
+    else if(email == null){
+        alert("Enter a valid email")
+        return false
+    }
+    else if (no==null || no.length<10){
+        alert("Enter a valid Phone Number")
+        return false
+    }
+    else if( fname , email , no ==null){
+      alert("Enter valid Credentials")
+      return false
+    }
+  }
+
+    </script>
+  </body>
+</html>

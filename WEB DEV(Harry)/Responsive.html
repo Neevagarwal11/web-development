@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media querries (Responsive Web designs)</title>
+</head>
+<style>
+    .box{
+        border: 2px solid red;
+        text-align: center;
+        font-size: 45px;
+        display: none;
+    }
+    @media only screen and (max-width:400px){           /*media query is used to show a specific element according to the min and max width or height is set it is used to make the website more responsive to different resolutions of diaplay like a phone , ipad , laptop or a desktop.*/
+        #box1{                                          /*Different css properties can also be set from this media query for a selected id of box*/
+            background-color: rgb(214, 214, 247);
+            display: block;
+        }
+    }
+    @media only screen and (min-width:401px) and (max-width:900px){
+        #box2{
+            display: inline-block;
+            width: 100%;
+            background-color: rgb(248, 248, 77);
+            color: rgb(136, 136, 183);
+        }
+    }
+    @media only screen and (min-width:901px) and (max-width:1300px){
+        #box3{
+            display: block;
+            background-color: bisque;
+        }
+    }
+    @media only screen and (min-width:1301px){
+        #box4{
+            display :block;
+            background-color: darkred;
+        }
+    } 
+</style>
+<body>
+    <div class="box" id="box1">Phone</div>
+    <div class="box" id="box2">Ipad</div>
+    <div class="box" id="box3">Laptop</div>
+    <div class="box" id="box4">Desktop</div>
+</body>
+</html>

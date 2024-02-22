@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Virtual Studio"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "WEB DEVELOPMENT"
+	}
+}

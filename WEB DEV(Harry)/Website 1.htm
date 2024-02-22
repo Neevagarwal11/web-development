@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neev Fitness</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Secular One', sans-serif;
+            padding: 0px;
+            margin: 0px;
+            background: url('Gym Website/Background.jpg') ;
+            background-size: 100%;
+            
+            
+            background-repeat: no-repeat;
+            height: 4444px;
+            box-sizing: border-box;
+            cursor:default;
+        }
+
+
+        .head {
+            /* border: 2px solid red; */
+            color: white;
+            display: inline-block;
+            text-align: center;
+
+        }
+
+        #left {
+            position: relative;
+            left: 13px;
+            top: 64px;
+            width: 10%;
+        }
+
+        #middle {
+            display: inline-block;
+            width: 44%;
+            margin: auto;
+            position: relative;
+            left: 16%;
+            top: 29px;
+
+        }
+
+        #right {
+            position: absolute;
+            right: 18px;
+            top: 24px;
+            padding: auto 9px;
+        }
+
+
+
+        .navbar li {
+            display: inline;
+            position: sticky;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: white;
+            margin-right: -1px;
+            padding: 33px;
+            
+        }
+
+        .navbar li a:hover {
+            color: rgb(231, 63, 63);
+            text-decoration: underline;
+        }
+
+        .btn {
+            color: rgb(242, 138, 138);
+            background-color: black;
+            border-radius: 4px;
+            font-family: 'Secular One', sans-serif;
+            padding-right: 0%;
+            margin-right: 0%;
+            height: 31px;
+            border-color: rgb(103, 102, 102);
+            cursor:pointer;
+        }
+
+
+
+        .head img {
+            width: 25%;
+            background-color: black;
+            display: block;
+            margin: auto;
+            /* mix-blend-mode: multiply; */
+
+        }
+
+        .container {
+            border: 1px solid white;
+            margin: 11% 3%;
+            color: white;
+            display: inline-block;
+            width: 15%;
+            padding: 78px;
+            border-radius: 8px;
+
+
+        }
+
+        .formhead {
+            position: relative;
+            top: -42px;
+            margin-bottom: 10px;
+            font-size: 34px;
+
+        }
+
+        .forminput {
+            display: block;
+            padding: 3%;
+            font-size: 18px;
+            margin: 3%;
+            width: 5%px;
+
+        }
+        .container .btn{
+            display: block;
+            width: 65px;
+            margin-left: 64px;
+            margin-top: 4px;
+            padding-right: 4px;
+
+        }
+        .forminput input{
+            background-color: grey;
+            border-radius: 7px;
+            text-align: center;
+            
+        }
+         ::placeholder{
+            color: rgb(241, 173, 173);
+                   
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="head" id="left">
+            <img src="https://static.vecteezy.com/system/resources/previews/000/631/350/original/dumbbell-icon-symbol-sign-vector.jpg"
+                alt="Neev Fitness">
+            <div>Neev Fitness</div>
+        </div>
+        <div class="head" id="middle">
+            <ul class="navbar">
+                <li> <a href="Responsive.html">Home</a></li>
+                <li> <a href="#">About</a> </li>
+                <li> <a href="#">Fitness Calculator</a> </li>
+                <li> <a href="#">Contact Us</a> </li>
+            </ul>
+        </div>
+        <div class="head" id="right">
+            <button class="btn">
+                Chat with us
+            </button>
+            <button class="btn" id="em">
+                Email us
+            </button>
+        </div>
+    </header>
+    <div class="container">
+        <h2 class="formhead">
+            Join Us Now...
+        </h2>
+        <form action="noaction.php">
+            <div class="forminput">
+                <input type="text" placeholder="Enter Your Name">
+            </div>
+            <div class="forminput">
+                <input type="text" placeholder="Enter Your Age">
+            </div>
+            <div class="forminput">
+                <input type="text" placeholder="Enter Your Gender">
+            </div>
+            <div class="forminput">
+
+                <input type="text" placeholder="Enter Your Address">
+            </div>
+        </form>
+        <button type="submit" class="btn">Submit</button>
+    </div>
+
+</body>
+
+</html>
