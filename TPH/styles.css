@@ -1,0 +1,329 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  font-family: Gophertext, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* NAVBar */
+#nav {
+  width: 100%;
+  height: 11.9vh;
+  z-index: 100;
+  position: relative;
+  background: linear-gradient(
+    0.25turn,
+    rgba(0, 0, 0, 0.1),
+    rgba(255, 255, 255, 0.1),
+    rgba(0, 0, 0, 0.1)
+  );
+ display: flex;
+
+}
+#nav img {
+  height: 10vh;
+  margin: 10px 50px;
+}
+
+
+/* BackGround */
+#bg {
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  background-repeat: no-repeat;
+  z-index: -100;
+}
+#bg img {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+  scale: 1 1.3;
+}
+
+/* Main */
+
+#main {
+  z-index: 10;
+  color: white;
+  /* border: 2px solid red; */
+  display: flex;
+  width: 100vw;
+  height: 85vh;
+  align-items: end;
+  justify-content: right;
+  animation-name : ani;
+  animation-duration: 1.8s;
+}
+@keyframes ani{
+  from{
+    margin-top: 80%;
+  }
+  to{
+    margin-bottom: 20%;
+  }
+}
+
+
+
+#main h1 {
+  font-size: 4.1rem;
+  justify-content: right;
+  align-items: right;
+  text-align: right;
+  font-weight: 700;
+  margin-bottom: 20vh;
+  line-height: 1.2;
+  margin-right: 40px;
+  position: absolute;
+}
+
+
+
+
+
+
+/* Main buttons */
+.btn {
+  border: 1px solid #ffffff;
+  height: 8vh;
+  background-color: bisque;
+  z-index: 100;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  margin-bottom: 51px;
+  margin-right: 18px;
+  padding: 25px;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .11));
+  line-height: 1.4;
+}
+.btn:hover{
+  cursor: pointer;
+  background: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, .2))
+  
+}
+.btn a {
+  color: #ffffff;
+  text-decoration: none;
+  line-height: 25px;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+.btn-container{
+  display: flex;
+  margin-right: 2.5%;
+}
+
+
+/* DropDown Button */
+
+#dropdown{
+  display:flex;
+  position: relative;
+  width: 15%;
+  margin-left: 40%;
+  justify-content:space-between;
+  align-items: center;
+  padding: 40px;
+  height: 100%;
+  /* border: 2px solid green; */
+  padding: 0%;
+  margin-right: 3%;
+}
+#drop-btn1{
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  /* margin-right: 0; */
+  font-size: 1.4em;
+  font-weight: 700;
+  display: inline-block;
+
+}
+
+#drop-btn1-content{
+  display: none;
+  position: absolute;
+  background-color: #17171B;
+  z-index: 5;
+  line-height: 1.6;
+  width: 100%;
+  margin-top:40px ;
+  margin: 0px;
+  border-radius: 12px;
+}
+#drop-btn1-content a{
+  text-decoration: none;
+  display: block;
+  color: grey;
+}
+#drop-btn1-content a:hover{
+  color: white;
+}
+#dropbtn:hover #drop-btn1-content{
+  display: block;
+  z-index: 10;
+  width: 160%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: auto;
+  padding: 15px;
+  line-height: 2.4;
+  margin-top: 12%;
+  margin-left: -10%;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+#drop-btn2{
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 30px;
+  display: inline-block;
+ 
+}
+#drop-btn2-content{
+  display: none;
+  position: absolute;
+  background-color: #17171B;
+  z-index: 5;
+  line-height: 2;
+  width: 100%;
+  margin-top:20px ;
+  border-radius: 12px;
+}
+#drop-btn2-content{
+  display: none;
+  position: absolute;
+  background-color: #17171B;
+  z-index: 5;
+  line-height: 2;
+  border-radius: 12px;
+}
+#drop-btn2:hover #drop-btn2-content{
+  display: block;
+  z-index: 10;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: auto;
+  padding: 20px;
+  line-height: 2.3;
+  margin-top: 12%;
+  margin-left: -10%;
+  font-weight: 600;
+}
+#drop-btn2-content a{
+  text-decoration: none;
+  display: block;
+  color: grey;
+}
+#drop-btn2-content a:hover{
+  color: white;
+}
+
+#drop-btn1 img{
+  height: 20px;
+  width: 17px;
+  display: inline;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 10px;
+  
+  filter: saturate(100%);
+  filter:invert(200%);
+}
+#dropbtn{
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid red; */
+
+}
+#drop-btn2 img{
+  height: 20px;
+  width: 17px;
+  display: inline;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 10px;
+  margin-top: 4px;
+  filter: saturate(100%);
+  filter:invert(200%);
+}
+#drop-btn2{
+  display: flex;
+  flex-direction: row;
+  /* border: 1px solid blue; */
+}
+
+
+#build{
+  /* border: 1px solid yellow; */
+  height: 100%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 4%;
+}
+#build a{
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #696B6C;
+  font-weight: 700;
+  cursor: not-allowed;
+  margin: 0px;
+}
+#build a::before{
+  content: "";  
+  background-image: url("https://www.freeiconspng.com/uploads/black-lock-icon-14.png");
+  background-size: 30px 30px;
+  display: inline-block;
+  height: 30px;
+  width: 38px;
+  background-repeat: no-repeat;
+  margin-top: 0px;
+  padding: 0px;
+}
+
+#social{
+  /* border: 2px solid blue; */
+  width: 10%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+}
+#social img{
+  margin: 0%;
+  padding: 0%;
+  width: 60%;
+  height: 4%;
+  padding: 7%;
+  border: 1px solid grey;
+  border-radius: 10%;
+  background-image: radial-gradient(circle closest-corner, rgba(255, 255, 255, 0), rgba(255, 255, 255, .15));
+}
+
