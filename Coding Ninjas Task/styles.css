@@ -12,7 +12,6 @@ body{
     width: 90%;
     /* position: absolute; */
     /* right: 50px; */
-
 }
 .nav h2{
     display: flex;
@@ -447,7 +446,6 @@ body{
 }
 #client-1-dots{
     display: inline;
-
     position: relative;
     top: -23%;
     z-index: -2;
