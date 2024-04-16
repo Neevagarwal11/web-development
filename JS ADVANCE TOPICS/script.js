@@ -63,7 +63,6 @@ btn.addEventListener("click",function(){
     this.style.backgroundColor="green";
 })
 
-
 //"Call" Keyword
     //Jab ek function aur ek object ko aur function ko call karke default mai this keh value ko replace karte hua obj ko direct karna hai tho ".call" use hota hai
 
@@ -197,3 +196,31 @@ document.querySelector("#th-exp")
             div.remove()
         },500)
     }, 500));
+
+
+
+// Map,Filter,Reduce
+
+setTimeout(function(){
+    console.log("Map,filter,reduce");
+},3000)
+
+//Map:-Used to make a new array.
+
+let arr=[42,534,532];
+var c = arr.map((value , index,array)=>{
+    console.log(value , value+1 + " Neev" ,  index, array);
+    return value;
+})
+// console.log(c);
+
+// Filter
+let arr2 = [23,44,34,53,23,53,489];
+let a2 = arr2.filter((a)=>{
+    console.log(a<50);
+    console.log("sjnjsdv");
+    return a<50;
+})
+// console.log(a2)
+
+

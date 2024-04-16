@@ -1,0 +1,23 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid brown;
+  width: 50vw;
+  height: 85vh;
+  border-radius: 40px;
+  background-color: transparent;
+  backdrop-filter: blur(6px);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50% , -50%);
+}
+body{
+  background: url("https://images.pexels.com/photos/312839/pexels-photo-312839.jpeg?cs=srgb&dl=pexels-nandhu-kumar-312839.jpg&fm=jpg")  no-repeat;
+  background-size: cover;
+  aspect-ratio: 19/6 ;
+  background-position-y: 10%;
+  z-index: -10;
+}
