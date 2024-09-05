@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: grand;
+  src: url(../Fonts/GrandSlang-Italic.otf);
+}
+
+@font-face {
+  font-family: logo;
+  src: url(../Fonts//Wremena\ Regular.otf);
+}
+
+@font-face {
+  font-family: degular;
+  src: url(../Fonts/DegularDisplay-BlackItalic.otf);
+}
+
+body{
+  overflow-x: hidden;
+}
+/* Ensure the scroll container takes up full height */
+[data-scroll-container] {
+  height: 100vh;
+  overflow: hidden;
+}
+/* Basic styles for sections to ensure visibility */
+[data-scroll-section] {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
